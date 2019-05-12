@@ -1,0 +1,12 @@
+● jenkins.service - LSB: Jenkins Automation Server
+   Loaded: loaded (/etc/rc.d/init.d/jenkins; bad; vendor preset: disabled)
+   Active: active (running) since Fri 2019-05-10 18:22:20 EDT; 1 day 6h ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 3033 ExecStart=/etc/rc.d/init.d/jenkins start (code=exited, status=0/SUCCESS)
+   CGroup: /system.slice/jenkins.service
+           └─3297 /etc/alternatives/java -Dcom.sun.akuma.Daemon=daemonized -Djava.awt.headless=true -DJENKINS_HOME=/var/lib/jenkins -jar /usr/lib/jenkins/jenkins.war --logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war --daemon --httpPort=8080 --debug=5 --handlerCountMax=100 --handlerCountMaxIdle=20
+
+May 10 18:21:55 localhost.localdomain systemd[1]: Starting LSB: Jenkins Automation Server...
+May 10 18:21:57 localhost.localdomain runuser[3047]: pam_unix(runuser:session): session opened for user jenkins by (uid=0)
+May 10 18:22:20 localhost.localdomain jenkins[3033]: Starting Jenkins [  OK  ]
+May 10 18:22:20 localhost.localdomain systemd[1]: Started LSB: Jenkins Automation Server.

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ssh intelycorellc@192.168.1.21
+systemctl is-active jenkins
